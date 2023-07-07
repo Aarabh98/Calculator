@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/10.6.4/math.js"
+    integrity="sha512-BbVEDjbqdN3Eow8+empLMrJlxXRj5nEitiCAK5A1pUr66+jLVejo3PmjIaucRnjlB0P9R3rBUs3g5jXc8ti+fQ==" crossorigin="anonymous" referrerpolicy="no-referrer">
+          </script>
+    <title>Calci</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="container" id="box">
+      <div class="screen">
+        <input id="display" type="text" placeholder="0" />
+      </div>
+      <div class="btns">
+        <div class="row">
+            <button class="btn">%</button>
+          <button onclick="display.value += '!'">x!</button>
+          <button class="btn">(</button>
+          <button class="btn">)</button>
+          <button id="ce" onclick="backspace()">CE</button>
+          <button id="ac" onclick="display.value=''">AC</button>
+        </div>
+        <div class="row">
+          <button onclick="display.value += 'sin('">sin</button>
+          <button onclick="pi()">π</button>
+          <button class="btn btn-num">7</button>
+          <button class="btn btn-num">8</button>
+          <button class="btn btn-num">9</button>
+          <button class="btn">÷</button>
+        </div>
+        <div class="row">
+          <button onclick="display.value += 'cos('">cos</button>
+          <button onclick="base10Log()">log</button>
+          <button class="btn btn-num">4</button>
+          <button class="btn btn-num">5</button>
+          <button class="btn btn-num">6</button>
+          <button class="btn ">*</button>
+        </div>
+        <div class="row">
+          <button onclick="display.value += 'tan('">tan</button>
+          <button onclick="squareRoot()"">√</button>
+          <button class="btn btn-num">1</button>
+          <button class="btn btn-num">2</button>
+          <button class="btn btn-num">3</button>
+          <button class="btn">-</button>
+        </div>
+        <div class="row">
+          <button onclick="e()">e</button>
+          <button onclick="power()">
+            x<span style="position: relative; bottom: 0.4em; right: 0.1em"
+              >y</span
+            >
+          </button>
+          <button class="btn btn-num">0</button>
+          <button class="btn">.</button>
+          <!-- <button id="eval" onclick="screen.value=eval(screen.value)">=</button> -->
+          <button id="eval" onclick="calculate()">=</button>
+          <button class="btn">+</button>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="./script.js"></script>
+</html>
